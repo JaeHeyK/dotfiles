@@ -1,0 +1,10 @@
+[user]
+	name = JaeHeyK
+	email = jaeheyk@gmail.com
+[core]
+	editor = vim
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
