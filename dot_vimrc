@@ -4,13 +4,15 @@ set pastetoggle=<F9>
 set hlsearch
 set number relativenumber
 set tabstop=8
-set autoindent
 set ttimeoutlen=1000
+set cindent
+set nosmartindent
 set so=20
 set cursorline
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 filetype on
+filetype indent on
 
 hi Visual      cterm=none      ctermfg=none    ctermbg=60
 hi CursorLine   term=none       cterm=none      ctermbg=60
