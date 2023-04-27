@@ -28,8 +28,8 @@ hi SpellBad			ctermfg=Black
 hi SpellRare			ctermfg=Black
 hi SpellLocal			ctermfg=Black
 hi StatusLineTerm		ctermfg=Black
-hi StatusLineTermNC		ctermfg=Black
-hi Error			ctermfg=Black
+hi Pmenu			ctermfg=7	ctermbg=0
+hi PmenuSel			ctermfg=0	ctermbg=12
 
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -67,9 +67,11 @@ call plug#end()
 
 "=== LSP settings =======================
 nnoremap <F2> :LspRename<cr>
-nnoremap <F9> :LspHover<cr>
+nnoremap <F9> :LspPeekDefinition<cr>
 nnoremap <F10> :LspReferences<cr>
 nnoremap <F12> :LspDefinition<cr>
+nnoremap <buffer> <expr><s-j> lsp#scroll(+4)
+nnoremap <buffer> <expr><s-k> lsp#scroll(-4)
 let g:lsp_preview_float = 1
 set signcolumn=yes
 
@@ -92,5 +94,5 @@ let g:vista_close_on_jump = 1
 "let g:vista_log_file = expand('~/vista.log')
 
 "== tmux settings =====================
-autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
+autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window " . expand("%:t"))
 autocmd VimLeave * call system("tmux setw automatic-rename")
