@@ -23,6 +23,7 @@ hi DiffAdd      cterm=none      ctermfg=Black   ctermbg=Green
 hi DiffChange   cterm=none      ctermfg=None    ctermbg=None
 hi DiffDelete   cterm=bold      ctermfg=Black   ctermbg=Red
 hi DiffText     cterm=none      ctermfg=Black   ctermbg=Yellow
+hi Error			ctermfg=Black
 hi ErrorMsg			ctermfg=Black
 hi SpellBad			ctermfg=Black
 hi SpellRare			ctermfg=Black
