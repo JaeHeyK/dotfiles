@@ -18,6 +18,7 @@ hi Visual	cterm=none      ctermfg=none    ctermbg=0
 hi CursorLine   term=none       cterm=none      ctermbg=0
 hi LineNr                                       ctermfg=15
 hi CursorLineNr term=none       cterm=none      ctermfg=3
+hi CursorColumn	cterm=none	ctermbg=15
 hi MatchParen   cterm=none      ctermbg=Blue    ctermfg=Black
 hi Comment      term=none       cterm=none      ctermfg=15
 hi DiffAdd      cterm=none      ctermfg=Black   ctermbg=Green
@@ -75,6 +76,7 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'tsufeki/asyncomplete-fuzzy-match', {
     \ 'do': 'cargo build --release',
     \ }
+Plug 'habamax/vim-rst'
 call plug#end()
 
 "=== LSP settings =======================
