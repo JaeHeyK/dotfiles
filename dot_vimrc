@@ -12,6 +12,7 @@ set cursorline
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 filetype on
+filetype plugin on
 filetype indent on
 
 hi Visual	cterm=none      ctermfg=none    ctermbg=0
