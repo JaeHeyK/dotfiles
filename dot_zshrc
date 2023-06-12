@@ -15,6 +15,9 @@ plugins=(zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-PATH=$PATH:~/bin
+PATH=$PATH:~/bin:~/.local/bin:~/scripts
 alias cm="chezmoi"
 alias cma="chezmoi add"
+alias cmc="chezmoi cd"
+
+alias python=python3
