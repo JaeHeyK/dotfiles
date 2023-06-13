@@ -12,7 +12,6 @@ set cursorline
 set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 filetype on
-filetype plugin on
 filetype indent on
 
 hi Visual	cterm=none      ctermfg=none    ctermbg=0
@@ -32,7 +31,7 @@ hi ErrorMsg                     ctermfg=7
 "hi SpellRare                   ctermfg=Black
 "hi SpellLocal                  ctermfg=Black
 "hi StatusLineTerm              ctermfg=Black
-hi Pmenu                        ctermfg=15      ctermbg=0
+hi Pmenu                        ctermfg=None      ctermbg=0
 hi PmenuSel                     ctermfg=0       ctermbg=7
 
 inoremap " ""<left>
@@ -82,12 +81,15 @@ call plug#end()
 
 "=== LSP settings =======================
 nnoremap <F2> :LspRename<cr>
-nnoremap <F9> :LspPeekDefinition<cr>
+nnoremap <F9> :LspHover<cr>
 nnoremap <F10> :LspReferences<cr>
 nnoremap <F12> :LspDefinition<cr>
 nnoremap <buffer> <expr><S-j> lsp#scroll(+4)
 nnoremap <buffer> <expr><S-k> lsp#scroll(-4)
 let g:lsp_preview_float = 1
+let g:lsp_diagnostics_highlights_enabled = 1
+let g:lsp_diagnostics_virtual_text_enabled = 0
+let g:lsp_diagnostics_echo_cursor = 1
 set signcolumn=yes
 
 "=== autocomplete settings ======================
