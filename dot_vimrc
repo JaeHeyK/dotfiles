@@ -15,7 +15,7 @@ filetype on
 filetype indent on
 
 hi Visual	cterm=none      ctermfg=none    ctermbg=0
-hi CursorLine   term=none       cterm=none      ctermbg=0
+hi CursorLine   term=none       cterm=none      ctermfg=None	ctermbg=0
 hi LineNr                                       ctermfg=15
 hi CursorLineNr term=none       cterm=none      ctermfg=3
 hi CursorColumn	cterm=none	ctermbg=15
@@ -71,12 +71,11 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'liuchengxu/vista.vim'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'tsufeki/asyncomplete-fuzzy-match', {
     \ 'do': 'cargo build --release',
     \ }
 Plug 'habamax/vim-rst'
+Plug 'zivyangll/git-blame.vim'
 call plug#end()
 
 "=== LSP settings =======================
@@ -84,6 +83,7 @@ nnoremap <F2> :LspRename<cr>
 nnoremap <F9> :LspHover<cr>
 nnoremap <F10> :LspReferences<cr>
 nnoremap <F12> :LspDefinition<cr>
+nnoremap <Leader><F12> :LspPeekDefinition<cr>
 nnoremap <buffer> <expr><S-j> lsp#scroll(+4)
 nnoremap <buffer> <expr><S-k> lsp#scroll(-4)
 let g:lsp_preview_float = 1
@@ -109,6 +109,9 @@ let g:vista_echo_cursor_strategy = 'scroll'
 let g:vista_stay_on_open = 1
 let g:vista_close_on_jump = 1
 "let g:vista_log_file = expand('~/vista.log')
+
+"=== git_blame.vim setting ======================
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 "== tmux settings =====================
 autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window " . expand("%:t"))
