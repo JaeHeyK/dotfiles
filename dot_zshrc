@@ -20,5 +20,7 @@ alias cm="chezmoi"
 alias cmad="chezmoi add"
 alias cmap="chezmoi apply"
 alias cmc="chezmoi cd"
+alias ta="tmux a"
+alias tad="tmux a -d"
 
 alias python=python3
