@@ -1,2 +1,4 @@
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+"\C-l": forward-word
+"\C-h": backward-word

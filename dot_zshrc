@@ -24,3 +24,6 @@ alias ta="tmux a"
 alias tad="tmux a -d"
 
 alias python=python3
+
+bindkey "^L" forward-word
+bindkey "^H" backward-word
