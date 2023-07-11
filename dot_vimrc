@@ -32,6 +32,7 @@ hi ErrorMsg                     		ctermfg=7
 hi LspWarningHighlight		cterm=reverse	ctermfg=11	ctermbg=0
 hi NonText					ctermfg=0	guifg=gray
 hi SpecialKey					ctermfg=0	guifg=gray
+hi Todo				term=reverse	cterm=reverse	ctermfg=11	ctermbg=0
 "hi lspReference			cterm=reverse	ctermfg=15
 "hi SpellBad                    ctermfg=Black
 "hi SpellRare                   ctermfg=Black
