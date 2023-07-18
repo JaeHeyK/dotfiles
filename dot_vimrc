@@ -11,7 +11,6 @@ set so=20
 set cursorline
 set backspace=indent,eol,start
 set listchars=tab:>-,space:·
-set list
 set whichwrap+=<,>,[,]
 filetype on
 filetype indent on
