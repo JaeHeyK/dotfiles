@@ -1,6 +1,7 @@
 syntax on
 colorscheme dim
 set pastetoggle=<F9>
+set incsearch
 set hlsearch
 set number relativenumber
 set tabstop=8
