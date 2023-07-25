@@ -62,7 +62,7 @@ noremap <C-l> <C-w>l
 noremap <F7> :set rnu!<CR>
 noremap <F8> :set nu!<CR>
 noremap <Leader><F7> :set nonu \| set nornu  \| set scl=no \| set nolist <CR> 
-noremap <Leader><F8> :set nu \| set rnu \| set scl=yes \| set list <CR>
+noremap <Leader><F8> :set nu \| set rnu \| set scl=yes <CR>
 
 augroup vimrcQfClose
     autocmd!
