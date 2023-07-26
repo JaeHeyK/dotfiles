@@ -1,10 +1,16 @@
 [user]
-	name = JaeHeyK
-	email = jaeheyk@gmail.com
+	name = jaeheyk.kim
+	email = jaeheyk.kim@lge.com
 [core]
 	editor = vim
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
 [alias]
 	br = branch
 	ci = commit
 	co = checkout
 	st = status
+[pull]
+	rebase = true
