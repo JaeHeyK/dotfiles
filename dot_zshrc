@@ -25,5 +25,9 @@ alias tad="tmux a -d"
 
 alias python=python3
 
+mp() {
+	cat /proc/mounts | grep $1 | awk '{print $2}'
+}
+
 bindkey "^L" forward-word
 bindkey "^H" backward-word
