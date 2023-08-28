@@ -83,15 +83,19 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
 "=== Code Info Plugins ================== 
 Plug 'liuchengxu/vista.vim'
 Plug 'zivyangll/git-blame.vim'
 Plug 'tpope/vim-fugitive'
+
 "=== Syntax Plugins =====================
 Plug 'habamax/vim-rst'
 Plug 'kergoth/vim-bitbake'
+
 "=== Edit Plugins =======================
 Plug 'jiangmiao/auto-pairs'
+
 call plug#end()
 
 "=== LSP settings =======================
@@ -100,8 +104,8 @@ nnoremap <F9> :LspHover<cr>
 nnoremap <F10> :LspReferences<cr>
 nnoremap <F12> :LspDefinition<cr>
 nnoremap <Leader><F12> :LspPeekDefinition<cr>
-nnoremap <buffer> <expr><S-j> lsp#scroll(+4)
-nnoremap <buffer> <expr><S-k> lsp#scroll(-4)
+"nnoremap <buffer> <expr><S-j> lsp#scroll(+4)
+"nnoremap <buffer> <expr><S-k> lsp#scroll(-4)
 let g:lsp_preview_float = 1
 let g:lsp_diagnostics_highlights_enabled = 1
 let g:lsp_diagnostics_virtual_text_enabled = 0
