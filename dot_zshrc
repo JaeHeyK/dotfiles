@@ -31,3 +31,23 @@ mp() {
 DISABLE_AUTO_TITLE="true"
 bindkey "^L" forward-word
 bindkey "^H" backward-word
+
+function preexec {
+	export last_cmd_start_time=$(date "+%s")
+	if [ "$1" != "noti" ]; then
+		export last_cmd="$1"
+	fi
+}
+
+export noti_url=""
+
+noti() {
+	local CMD="$last_cmd"
+
+	if [ -z "$noti_url" ]; then
+		echo "noti_url is not set. Please check ntfy url"
+		return
+	fi
+
+	curl -s -d "[$(uname -n)] \"$CMD\" is done" $noti_url > /dev/null
+}
